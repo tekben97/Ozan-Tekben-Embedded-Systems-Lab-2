@@ -1,0 +1,28 @@
+#include <msp430.h> 
+
+
+/**
+ * main.c
+ */
+float b = 5.0;
+int main(void)
+{
+	WDTCTL = WDTPW | WDTHOLD;	// stop watchdog timer
+	
+	unsigned char c = 0x0f;
+	unsigned char d = 0x05;
+
+	//declare 2 more unsigned char to store and & or operation values
+	unsigned char e = 0x00;
+	unsigned char f = 0x00;
+
+	int a = 3;
+	a+=1;   //increment
+	b-=1;   //decrement
+
+	e=c|d; //or
+	f=c&d; //and
+
+
+	return 0;
+}
